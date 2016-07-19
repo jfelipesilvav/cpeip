@@ -1,0 +1,38 @@
+<div class="menu_bar cf" ng-controller="botoneraSostenedorctl">
+    <ul class="nav cf">
+        <li class="active"><a href="javascript:enviar('sostenedorCreacionUsuario');"> <span>Administración Usuario</span></a>
+
+            <ul class="columnas">
+                <li><a
+                        href="javascript:enviar('sostenedorCreacionUsuario');">Creación Usuario</a>
+                </li>
+                <li><a
+                        href="javascript:enviar('sostenedorCreacionSubusuario');">Creación SubUsuario</a>
+                </li>
+            </ul>
+        </li>
+        <li><a href="javascript:enviar('sostenedor_profile');"> <span>Datos Sostenedor</span>
+                </a>
+                <ul class="columnas">
+                    <li><a
+                            href="javascript:enviar('sostenedor_establecimento');">Datos Establecimientos</a>
+                    </li>
+                    <li><a
+                            href="javascript:enviar('sostenedor_docente');">Datos Docentes</a>
+                    </li>
+                </ul>
+        </li>
+        <li class="active"><a href="/SigeInterno/Bienvenida/Bienvenida"> <span>Declaraciones</span></a>
+
+            <ul class="columnas">
+                <li><a
+                        href="javascript:enviar('sostenedor_docente_declaracion_mensual');">Declaraciones Mensuales</a>
+                </li>
+                <li><a
+                        href="javascript:enviar(&quot;&quot;,&quot;Establecimiento/Establecimiento#&quot;);">Solicitud de Asignaciones Docentes</a>
+                </li>
+            </ul>
+        </li>
+
+    </ul>
+</div>

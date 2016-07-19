@@ -66,8 +66,10 @@ sap.ui.controller("primeraapp.index", {
 		
 		$("#formId").slideDown(function(){
 	    var datos = oTable.getModel('cust_reembolsos').oData['cust_reembolsos('+ seleccion +')'];
+	    console.log(datos);
 	    
-	    var usuario = datos.cust_monto;
+	    
+	    //var usuario = datos.cust_monto;
 	    
 		}
 	)}

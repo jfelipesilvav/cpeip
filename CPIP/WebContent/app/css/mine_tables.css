@@ -1,0 +1,422 @@
+/*
+ * Colour dictionary:
+ *
+ * Table control elements:   #719ba7
+ * Header cells:             #66A9BD
+ * Body header cells:        #91c5d4
+ * Body content cells:       #d5eaf0
+ * Body content cells (alt): #bcd9e1
+ * Footer header:            #b0cc7f
+ * Footer content:           #d7e1c5
+ */
+
+/*
+ * DataTables framework
+ */
+div.dataTables_wrapper {
+	background-color: #ffffff;
+	border: 1px solid #bebebe;
+	border-radius:10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+div.dataTables_length {
+	float: left;
+	color: #666666;
+	width: 50%;
+}
+
+div.dataTables_length.nodata {
+	float: left;
+	color: #666666;
+	width: 100%;
+}
+
+
+div.mineduc .blueline {
+	border: 1px solid #006BB7;
+	width: 32%;
+	margin-top: 10px;
+	float: left;
+}
+
+div.mineduc .redline {
+	border: 1px solid #EF4143;
+	width: 66%;
+	margin-top: 10px;
+	float: left;
+}
+
+div.dataTables_filter {
+	float: right;
+	color: #666666;
+
+}
+
+div.dataTables_info {
+	padding: 9px 6px 6px 6px;
+	float: left;
+	color: #666666;
+}
+
+div.dataTables_paginate {
+	float: right;
+	color: #666666;
+}
+
+div.dataTables_length,
+div.dataTables_filter,
+div.dataTables_paginate {
+	padding: 6px;
+}
+
+/* Self clearing - http://www.webtoolkit.info/css-clearfix.html */
+.dataTables_wrapper:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+html[xmlns] .dataTables_wrapper {
+	display: block;
+}
+ 
+* html .dataTables_wrapper {
+	height: 1%;
+}
+
+
+/*
+ * Table styles
+ */
+table.mineduc{
+	width: 99%;
+	clear: both;
+	/*margin-top:10px;*/
+	margin: 10px auto;
+	border-top: 1px dotted #bebebe;
+	border-left: 1px dotted #bebebe;
+	border-spacing: 0;
+}
+
+.fixed-container{
+	background-color: #ffffff;
+	border: 1px solid #bebebe;
+	border-radius:10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-webkit-border-radius: 10px;		
+	position:relative;
+	width:920px;
+	margin:0 auto;
+	overflow-x:scroll;
+  	overflow-y:visible;
+}
+
+table.mineduc.fixed {
+	margin: 20px 5px;
+  	width: 98%;
+}
+
+table.mineduc td,
+table.mineduc th {
+	padding: 2px;
+	border: 1px solid #fff;
+}
+
+table.mineduc th{
+	color: #ffffff;
+}
+
+table.mineduc td{
+	color: #666666;
+}
+
+/* Header cells */
+table.mineduc thead th {
+	text-align: center;
+	background: #006BB7;
+	padding: 5px 15px;
+}
+table.mineduc thead tr th {
+	border-right: 1px dotted #bebebe;
+	border-bottom: 1px dotted #bebebe;
+}
+
+/* Body cells */
+table.mineduc tbody th {
+	text-align: left;
+	background: #bee3ee;
+	color: #303030;
+	border-right: 1px dotted #bebebe;
+	border-bottom: 1px dotted #bebebe;
+}
+	
+table.mineduc tbody td {
+	text-align: left;
+	background: #ffffff;
+}
+table.mineduc tbody tr:hover td,
+table.mineduc tbody tr.odd:hover td{
+	background: none repeat scroll 0 0 #cecece;
+	color:#333333;
+}
+
+table.mineduc tbody tr td{
+	padding: 3px 4px;
+	border-right: 1px dotted #bebebe;
+	border-bottom: 1px dotted #bebebe;
+}
+
+/** estilos de contenido oculto en tablas mediante datatables**/
+table.mineduc tbody td.table_detail_rows{
+	text-align: left;
+	background: #cecece;
+	color: #696969;
+    font-weight: bold;
+    line-height: 20px;
+    padding: 6px 15px;	
+}
+
+tbody tr td.table_detail_rows ul li{
+	display: block;
+    float: left;
+    background-image : url(../img/vineta_gob.png);
+	background-repeat: no-repeat;
+	background-position: 0 9px;
+	padding-left: 10px;	    
+}
+
+tbody tr td.table_detail_rows ul li span.inner_label{
+	display: block;
+    float: left;
+    width: 240px;
+
+}
+tbody tr td.table_detail_rows ul li span.inner_content{
+	display: block;
+    float: left;
+    width: 560px;
+}
+/** estilos de contenido oculto en tablas mediante datatables**/
+
+/** clases para resaltar filas cuando ocurre algun evento **/
+table.mineduc tbody tr.destaca td {
+	cursor:pointer;
+	background: none repeat scroll 0 0 #bebebe;
+	color:#333333;
+}
+table.mineduc tbody tr.destaca td a {
+	text-decoration:underline;
+}
+table.mineduc tbody tr td.row-success,
+table.mineduc tbody tr.odd td.row-success {
+	background: none repeat scroll 0 0 #4F8A10;
+	color:#ffffff;
+}
+table.mineduc tbody tr td.row-error,
+table.mineduc tbody tr.odd td.row-error {
+	background: none repeat scroll 0 0 #D8000C;
+	color:#ffffff;
+}
+/** clases para resaltar filas cuando ocurre algun evento **/
+
+table.mineduc tbody td.centered_cell{
+	text-align: center;
+}
+
+table.mineduc tbody td.right_cell{
+	text-align: right;
+}
+		
+table.mineduc tbody td input[type=text]{
+	width:40px;
+	text-align:right;
+}
+
+table.mineduc tbody tr.odd td { 
+	background: #ebebeb;
+}
+
+table.mineduc tbody tr td ul li{
+	display: block;
+    background-image : url(../img/vineta_gob.png);
+	background-repeat: no-repeat;
+	background-position: 0 9px;
+	padding-left: 10px;	    
+}
+
+/**SPECIFIC CONTROL FIXES**/
+/**to remove in revision**/
+div#table_container.mineduc div#listado_docentes_wrapper.dataTables_wrapper div#listado_docentes_filter.dataTables_filter label input{
+    border: 1px solid #BEBEBE;
+    border-radius: 2px 2px 2px 2px;
+    color: #656565;
+    height: 20px;
+    line-height: 20px;
+    min-width: 0px;
+    padding: 0 10px 0 5px;
+}
+
+.dataTables_filter label input{
+    border: 1px solid #BEBEBE;
+    border-radius: 2px 2px 2px 2px;
+    color: #656565;
+    height: 20px;
+    line-height: 20px;
+    min-width: 0px;
+    padding: 0 10px 0 5px;
+}
+
+/**to remove in revision**/
+div#table_container.mineduc div.dataTables_wrapper div.dataTables_filter label{
+	display: inline;
+}
+div#table_container.mineduc div.dataTables_wrapper div.dataTables_length label select{
+	width: 70px;
+}
+
+.dataTables_filter label{
+	display: inline;
+}
+
+/**to remove in revision**/
+div#table_container.mineduc div#listado_docentes_wrapper.dataTables_wrapper div#listado_docentes_length.dataTables_length label{
+	display: inline;
+}
+
+.dataTables_length label{
+	display: inline;
+}
+
+
+/**SPECIFIC CONTROL FIXES**/
+
+/* Footer cells */	
+table.mineduc tfoot th {
+	/*background: #b0cc7f;*/
+	background: #66a9bd;
+	text-align: left;
+	text-align: center;
+}
+	
+table.mineduc tfoot td {
+	background: #d7e1c5;
+	text-align: center;
+	font-weight: bold;
+}
+
+/***/
+/*
+ * Pagination
+ */
+span.paginate_button, 
+span.paginate_active, 
+a.paginate_button,
+a.paginate_active,
+a.paginate_enabled_previous{
+	display: inline-block;
+	background-color: #ebebeb;
+	border: #bebebe 1px dotted;
+	padding: 4px 10px;
+	margin-left: 2px;
+	cursor: pointer;
+	/**please move this to ie.css**/
+	/**cursor: hand;**/
+}
+
+span.paginate_active,
+a.paginate_active {
+	background-color: #006BB7;
+	border: 1px solid #006BB7;
+	color: #fff;
+}
+
+span.paginate_button:hover,
+a.paginate_button:hover {
+	background-color: #cecece;
+	color: #006BB7;
+	font-weight: 500; /** 400 normal, 700 bold**/
+}
+
+span.paginate_button_disabled,
+span.paginate_button_disabled:hover,
+a.paginate_button_disabled,
+a.paginate_button_disabled:hover {
+	color: #9c9c9c;
+	background-color: #ebebeb;
+	cursor:default;
+}
+
+div.dataTables_paginate span>span {
+	width: 15px;
+	text-align: center;
+}
+
+/* Pagination nested */
+.paginate_disabled_previous, .paginate_enabled_previous,
+.paginate_disabled_next, .paginate_enabled_next {
+	background-color: #ebebeb;
+	padding: 4px 10px;
+	margin-left: 2px;
+	border: #bebebe 1px dotted;
+	float: left;
+	cursor: pointer;
+	*cursor: hand;
+}
+.paginate_enabled_previous:hover,
+.paginate_enabled_next:hover {
+	background-color: #cecece;
+	color: #006BB7;
+	font-weight: 500;
+}
+.paginate_disabled_previous:active, .paginate_enabled_previous:active,
+.paginate_disabled_next:active, .paginate_enabled_next:active {
+	background-color: #006BB7;
+	border: 1px solid #006BB7;
+	color: #fff;
+}
+.paginate_disabled_previous, .paginate_disabled_next{
+	color: #9c9c9c;
+	background-color: #ebebeb;
+	cursor:default;
+}
+/*
+ * Sorting
+ */
+table.mineduc thead th.sorting_asc {
+	background: #006BB7 url('../img/sort_asc.png') no-repeat right center;
+	cursor:pointer;
+}
+
+table.mineduc thead th.sorting_desc {
+	background: #006BB7 url('../img/sort_desc.png') no-repeat right center;
+	cursor:pointer;
+}
+
+table.mineduc thead th.sorting {
+	background: #006BB7 url('../img/sort_both.png') no-repeat right center;
+	cursor:pointer;
+}
+
+
+table#cursos_niveles.mineduc td.group{
+    background-color: #D1CFD0;
+    border: 1px solid #A19B9E;
+    padding: 3px 10px;
+    font-weight:bold;
+    text-align:left;
+}
+
+table#cursos_niveles.mineduc tbody tr td{
+	text-align:center;
+}
+
+table#alumnos_cursos.mineduc tbody tr td.check{
+	text-align:center;
+}

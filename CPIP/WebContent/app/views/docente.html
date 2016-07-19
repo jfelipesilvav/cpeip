@@ -1,0 +1,136 @@
+<style>
+    canvas {display: block;margin: 0 auto;}
+</style>
+<div ng-include="'app/views/botoneraDocente.html'"></div>
+<div class="tab_content rounded-top rounded-bottom" ng-controller="docentectr">
+
+    <div id="content" class="cf">
+        <h2>Dashboard:</h2>
+        <div class="row">
+        <div class="col-xs-3">
+            <a class="info-tiles tiles-facebook" ng-href="#/ui-tiles" data="{ title: 'Orders', href: '#/ui-tiles',text: '9', color: 'danger'}" href="#/ui-tiles">
+                <div class="tiles-heading">
+                    <div class="text-center ng-binding">Cantidad Sostenedores</div>
+                </div>
+                <div class="tiles-body">
+                    <div class="text-center ng-binding" ng-show="true">3</div>
+                </div>
+            </a>
+        </div>
+            <div class="col-xs-3">
+                <a class="info-tiles tiles-twitter" ng-href="#/ui-tiles" data="{ title: 'Orders', href: '#/ui-tiles',text: '9', color: 'danger'}" href="#/ui-tiles">
+                    <div class="tiles-heading">
+                        <div class="text-center ng-binding">Monto Asignación Mes Actual</div>
+                    </div>
+                    <div class="tiles-body">
+                        <div class="text-center ng-binding" ng-show="true">$660.000</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-xs-3">
+                <a class="info-tiles tiles-success" ng-href="#/ui-tiles" data="{ title: 'Orders', href: '#/ui-tiles',text: '9', color: 'danger'}" href="#/ui-tiles">
+                    <div class="tiles-heading">
+                        <div class="text-center ng-binding">Cantidad Sostenedores Pendiente de Pago</div>
+                    </div>
+                    <div class="tiles-body">
+                        <div class="text-center ng-binding" ng-show="true">1</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-xs-3">
+                <a class="info-tiles tiles-danger" ng-href="#/ui-tiles" data="{ title: 'Orders', href: '#/ui-tiles',text: '9', color: 'danger'}" href="#/ui-tiles">
+                    <div class="tiles-heading">
+                        <div class="text-center ng-binding">Cantidad Ticket</div>
+                    </div>
+                    <div class="tiles-body">
+                        <div class="text-center ng-binding" ng-show="true">8</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-6">
+             <div class="table_container_dashboard">
+                    <div id="table_container_dashboard_central" class="mineduc dataTables_wrapper">
+                        <div class="mineduc dataTables_length nodata">
+                            <div>
+                                <strong>Montos Pagados x Sostenedor</strong>
+                            </div>
+                            <div class="blueline"></div>
+                            <div class="redline"></div>
+                            <canvas id="line" class="chart chart-line" chart-data="data"
+                                    chart-labels="labels" chart-legend="false" chart-series="series"
+                                    chart-click="onClick" >
+                            </canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div id="table_container_dashboard" class="mineduc dataTables_wrapper">
+                    <div class="mineduc dataTables_length nodata">
+                        <div>
+                            <strong>Horas x Sostenedor</strong>
+                        </div>
+                        <div class="blueline"></div>
+                        <div class="redline"></div>
+                        <canvas id="bar" class="chart chart-bar"
+                                chart-data="dataHorasSostenedor" chart-labels="labels"> chart-series="series"
+                        </canvas>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div id="table_container_dashboard_footer" class="mineduc dataTables_wrapper">
+                    <div class="mineduc dataTables_length nodata">
+                        <div>
+                            <strong>Dias Trabajados</strong>
+                        </div>
+                        <div class="blueline"></div>
+                        <div class="redline"></div>
+                        <canvas id="bar" class="chart chart-bar"
+                                chart-data="dataDiasTrabajados" chart-labels="labels"> chart-series="series"
+                        </canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div id="table_container_dashboard_footer" class="mineduc dataTables_wrapper">
+                    <div class="mineduc dataTables_length nodata">
+                        <div>
+                            <strong>Horas Trabajadas Ultimo Mes</strong>
+                        </div>
+                        <div class="blueline"></div>
+                        <div class="redline"></div>
+                        <canvas id="doughnut" class="chart chart-doughnut"
+                                chart-data="dataRatioHorasTrabajadas" chart-labels="series">
+                        </canvas>
+                    </div>
+                </div>
+           </div>
+            <div class="col-md-4">
+                <div id="table_container_dashboard_footer" class="mineduc dataTables_wrapper">
+                    <div class="mineduc dataTables_length nodata">
+                        <div>
+                            <strong>Estado Tickes</strong>
+                        </div>
+                        <div class="blueline"></div>
+                        <div class="redline"></div>
+                        <canvas id="doughnut" class="chart chart-doughnut"
+                            chart-data="dataRatio" chart-labels="seriesLabel">
+                        </canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+

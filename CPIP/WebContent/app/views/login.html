@@ -1,0 +1,35 @@
+
+<div class="userinfo">
+    <br>
+</div>
+<div class="login_content rounded-top rounded-bottom" ng-controller="loginctr">
+    <div class="centered_login">
+        <h2>Inicio de Sesión</h2>
+        <div>
+            <form id="login_form" name="login_form" action="Login"
+                  method="post">
+                <input value="" id="accion" name="accion" type="hidden" />
+                <p>
+                    <label for="txtUsuario">Nombre de Usuario:</label> <br /> <input
+                        maxlength="25" size="20" class="text" id="form_name"
+                        name="txtUsuario" type="text" ng-model="usuario" />
+                </p>
+                <p>
+                    <label for="txtClave">Contraseña:</label> <br /> <input
+                        maxlength="25" size="20" class="text" id="form_passw"
+                        name="txtClave" type="password" ng-model="clave" />
+                </p>
+                <p>
+                    <input id="remember_session" name="remember_session"
+                           type="checkbox" /><span>No cerrar sesión</span>
+                </p>
+                <p>
+                    <input value="Ingresar" id="entrar" name="entrar" ng-click="ingresar();" type="button"  />
+                </p>
+                <p>
+                    <a href="#">¿Olvido su Contraseña?</a>
+                </p>
+            </form>
+        </div>
+    </div>
+</div>

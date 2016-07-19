@@ -1,0 +1,162 @@
+
+<style>
+    canvas {display: block;margin: 0 auto;}
+</style>
+<div ng-include="'views/botoneraDocente.html'"></div>
+
+
+<div class="tab_content" ng-controller="docentectrpa">
+
+    <div id="content" class="cf">
+
+        <div class="pan_center rounded-top rounded-bottom">
+
+            <div class="mineduc dataTables_length nodata">
+                <div>
+                    <h2>Detalle Calculo Asiganciones x  Sostenedor</h2>
+                </div>
+                <div class="blueline"></div>
+                <div class="redline"></div>
+
+                <br><br>
+
+
+                <div class="row" ng-show="RBDShow">
+                    <!-- left column -->
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="text-center">
+                            <img src="img/{{imagen}}" class="avatar img-circle img-thumbnail" alt="avatar">
+                        </div>
+                    </div>
+                    <!-- edit form column -->
+                    <div class="col-md-8 col-sm-6 col-xs-12 personal-info">
+                        <h3>Información Establecimiento Educacional</h3>
+                        <form class="form-horizontal" role="form">
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">Nombre:</label>
+                                <div class="col-lg-8">
+                                    <input class="form-control" name="nombreEst" ng-model="nombre" type="text">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">Comuna:</label>
+                                <div class="col-lg-8">
+                                    <input class="form-control"  name="comunaEst" ng-model="comuna" type="text">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">Teléfono:</label>
+                                <div class="col-lg-8">
+                                    <input class="form-control" name="telefonoEst" ng-model="telefono" type="text">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">E-mail contacto:</label>
+                                <div class="col-lg-8">
+                                    <input class="form-control" name="emailEst" ng-model="emailContacto" type="text">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">Página web:</label>
+                                <div class="col-lg-8">
+                                    <input class="form-control" name="webEst" ng-model="web" type="text">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Director(a):</label>
+                                <div class="col-md-8">
+                                    <input class="form-control" name="directorEst" ng-model="director" type="text">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Sostenedor:</label>
+                                <div class="col-md-8">
+                                    <input class="form-control" name="sostenedorEst" ng-model="sostenedor" type="text">
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+
+                <div>
+
+                <div class="row">
+
+                    <div id="table_container" class="fixed-container">
+                        <div class="mineduc dataTables_length nodata">
+
+                            <div >
+                                <select ng-model="model.selectedCategory" ng-options="category as category.name for category in model.categories" data-ng-change="categoryChange()"></select>
+
+                                <select ng-model="model.selectedCategory.filterValue" data-ng-options="subCategory for subCategory in model.selectedCategory.subCategory" data-ng-change="subCategoryChange()"></select>
+
+                            </div>
+
+
+                        </div>
+
+                        <table class="mineduc fixed" id="tabla_certificados" name="tabla_certificados"  ng-show="SOSShow">
+                            <thead>
+                            <tr>
+                                <th>RBD</th>
+                                <th>Nombre</th>
+                                <th>Valor Hora RBMN</th>
+                                <th>Año Servicio</th>
+                                <th>Bienios</th>
+                                <th>BRP título</th>
+                                <th>BRP mención</th>
+                                <th>Tramo</th>
+                                <th>Licencia (dias)</th>
+                                <th>Permisos S/goce Sueldo(dias)</th>
+                                <th>Ausencia no Justificada</th>
+                                <th>Total Días</th>
+                            </tr>
+                            </thead>
+                            <tbody class="td.centered_cell">
+                            <tr><th>Resultados</th></tr>
+                            <tr>
+                                <td class="text-center">8592</td>
+                                <td class="text-center">LICEO JOSE MIGUEL INFANTE</td>
+                                <td class="text-center">$12.000</td>
+                                <td class="text-center">3</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">Titulo</td>
+                                <td class="text-center">mencion</td>
+                                <td class="text-center">Tramo</td>
+                                <td class="text-center">4</td>
+                                <td class="text-center">0</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">14</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">9759</td>
+                                <td class="text-center">LICEO LAURA VICUNA</td>
+                                <td class="text-center">$10.000</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">Titulo</td>
+                                <td class="text-center">mencion</td>
+                                <td class="text-center">Tramo</td>
+                                <td class="text-center">4</td>
+                                <td class="text-center">0</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">12</td>
+                            </tr>
+                            </tbody>
+                            <tfoot>
+                            </tfoot>
+                        </table>
+                        <div class="dataTables_length">&nbsp;</div>
+                    </div>
+                 </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+

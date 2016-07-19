@@ -1,0 +1,41 @@
+<div class="menu_bar cf" ng-controller="botoneraDocentectl">
+    <ul class="nav cf">
+        <li class="active"><a href="/SigeInterno/Bienvenida/Bienvenida"> <span>Asignaciones</span></a>
+
+            <ul class="columnas">
+                <li><a
+                        href="javascript:enviar('docente_planilla_asignaciones');">Planillas de Asignaciones</a>
+                </li>
+                <li><a
+                        href="javascript:enviar(&quot;&quot;,&quot;Establecimiento/Establecimiento#&quot;);">Ver Declaraciones de Asignaciones</a>
+                </li>
+                <li><a
+                        href="javascript:enviar(&quot;&quot;,&quot;Establecimiento/Establecimiento#&quot;);">His. Asig y Declaraciones</a>
+                </li>
+            </ul>
+
+
+        </li>
+        <li><a href="#"> <span>Consultas</span>
+        </a>
+            <ul class="columnas">
+                <li><a
+                        href="javascript:enviar(&quot;&quot;,&quot;Establecimiento/Establecimiento#&quot;);">Generar Consultas</a>
+                </li>
+                <li><a
+                        href="javascript:enviar(&quot;&quot;,&quot;Establecimiento/Establecimiento#&quot;);">Listar Consultas</a>
+                </li>
+            </ul></li>
+        <li><a href="#"> <span>Perfil Docente</span>
+        </a>
+            <ul class="columnas">
+                <li><a
+                        href="javascript:enviar(&quot;&quot;,&quot;Reportes/ReporteNacional&quot;);">
+                    -   Modificar</a></li>
+                <li><a
+                        ng-click="enviar('docente_profile');">
+                    -   Visualizar</a></li>
+
+            </ul></li>
+    </ul>
+</div>

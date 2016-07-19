@@ -1,0 +1,152 @@
+/*
+* parte de CSS apps MINEDUC
+* 
+* Estilos extendidos para botones con iconos de fonde
+*
+* @version 2.0 
+* @author mineduc.cl
+* DICCIONARIO DE COLORES
+* ===================================
+* colores basicos gob.cl / mineduc.cl
+*
+* #006BB7 azul claro
+* #1B4B73 azul oscuro/marino
+* #EF4143 rojo gob
+* #EF6769 rojo gob claro 
+*
+*/
+
+/**replicate css class with plain option**/
+
+button.btn_azul{
+	background-color: #006BB7;
+	margin: 0px 10px;
+	background-image: linear-gradient(to bottom, #006BB7 0%, #00477A 100%);
+	background-repeat: repeat-x;
+	border: 1px solid #005C9E;
+	color: #ffffff;
+	overflow:visible;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.42857;
+	padding: 6px 12px;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;	
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset, 0 1px 1px rgba(0, 0, 0, 0.075);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+
+button.btn_azul:hover{
+	background-color: #00477A;
+    background-position: 0 -15px;
+}
+
+.btn{
+	display:inline-block;
+	line-height:25px;
+	margin-bottom:3px;
+}
+
+.aceptar:before{
+	content: "\e013";
+}
+.actualizar:before{
+	content: "\e031";
+}
+.buscar:before{
+	content: "\e003";
+}
+.imprimir:before{
+	content: "\e045";
+}
+.cancelar:before{
+	content: "\e014";
+}
+.descargar:before{
+	content: "\e166";
+}
+.editar:before{
+	content: "\270f";
+}
+.generardoc:before{
+	content: "\e022";	
+}
+.guardar:before{
+	content: "\e175";
+}
+.siguiente:before {
+	content: "\e080";
+	float:right;
+	margin-left:5px;
+}
+.volver:before {
+	content: "\e079";
+}
+.subir:before{
+	content: "\e113";
+}
+
+.aceptar, 
+.actualizar,
+.buscar,
+.imprimir,
+.cancelar,
+.descargar,
+.editar,
+.generardoc,
+.guardar,
+.siguiente,
+.volver,.subir{
+	position: relative;
+	top: 1px;
+	display: inline-block;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.aceptar:before,
+.actualizar:before,
+.buscar:before,
+.imprimir:before,
+.cancelar:before,
+.descargar:before,
+.editar:before,
+.generardoc:before,
+.guardar:before,
+.siguiente:before,
+.volver:before,.subir:before{
+	font-family: 'Glyphicons Halflings';
+  	src: url('../font/glyphicons-halflings-regular.eot');
+	src: url('../font/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../font/glyphicons-halflings-regular.woff') format('woff'), url('../font/glyphicons-halflings-regular.ttf') format('truetype'), url('../font/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+	font-style: normal;
+	font-weight: normal;
+	margin-right: 5px;
+}
+
+/*BOOTSTRAP BASED BUTTONS*/
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../font/glyphicons-halflings-regular.eot');
+  src: url('../font/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../font/glyphicons-halflings-regular.woff') format('woff'), url('../font/glyphicons-halflings-regular.ttf') format('truetype'), url('../font/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
